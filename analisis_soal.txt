@@ -1,0 +1,39 @@
+**1.1 Definisi Masalah & Tujuan**
+
+---
+
+### **[Permasalahan]**
+
+Pada hari perkuliahan, IT Del menyelenggarakan sistem piket yang melibatkan 7 orang mahasiswa untuk menyiapkan ompreng makanan. Proses kerja terdiri dari beberapa tahapan berurutan. Tahap pertama adalah memasukkan lauk ke dalam ompreng dengan waktu pengerjaan antara 30 detik hingga 1 menit per ompreng. Setelah itu, ompreng diangkat ke atas meja oleh petugas lain dengan kapasitas pengangkutan 4–7 ompreng sekaligus dalam waktu 20 detik hingga 1 menit. Tahap terakhir adalah penambahan nasi ke dalam ompreng dengan waktu pengerjaan 30 detik hingga 1 menit per ompreng.
+
+Proses ini dilakukan untuk memenuhi kebutuhan 60 meja, di mana setiap meja diperuntukkan bagi 3 mahasiswa. Seluruh kegiatan piket dimulai pada pukul 07.00 pagi dan berlangsung hingga seluruh ompreng selesai disiapkan.
+
+---
+
+### **[Tujuan]**
+
+* Mengetahui waktu penyelesaian seluruh proses penyiapan ompreng untuk 60 meja
+* Menganalisis utilisasi masing-masing petugas pada setiap tahapan pekerjaan
+* Menghitung waktu tunggu antar proses (bottleneck) dalam alur kerja
+* Membuat model simulasi yang fleksibel untuk variasi jumlah petugas, meja, dan waktu pelayanan
+
+---
+
+### **[Asumsi Sistem]**
+
+* Jam operasi dimulai pukul **07.00**
+* Total terdapat **7 mahasiswa** yang bertugas
+* Proses terdiri dari **3 tahap berurutan**:
+
+  1. Pengisian lauk ke ompreng
+  2. Pengangkutan ompreng ke meja
+  3. Penambahan nasi
+* Waktu pengisian lauk: **30–60 detik per ompreng** (distribusi seragam)
+* Waktu pengangkutan: **20–60 detik per perjalanan** dengan kapasitas **4–7 ompreng** (distribusi seragam)
+* Waktu penambahan nasi: **30–60 detik per ompreng** (distribusi seragam)
+* Total kebutuhan ompreng sebanyak **60 meja × 3 mahasiswa = 180 ompreng**
+* Setiap tahap dikerjakan oleh petugas yang berbeda sesuai pembagian tugas
+* Ompreng diproses berdasarkan urutan kedatangan (first come, first served)
+* Tidak ada gangguan operasional selama proses berlangsung
+
+Struktur ini sudah siap dijadikan dasar pemodelan simulasi discrete-event di Python (misalnya menggunakan SimPy).
